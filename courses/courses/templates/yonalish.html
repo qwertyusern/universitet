@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yonalish</title>
+</head>
+<body>
+    <h1 style="text-align:center">Bizda bor yonalishlar royhati:</h1>
+    {% for i in yonalish %}
+    <ul>
+        <li><h2>{{i}}</h2>></li>
+    </ul>
+    <button><a href="/yonalish/{{i.id}}">O'chirish</a> </button>
+    {%endfor%}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ustozlar</title>
+</head>
+<body>
+    <h1 style="text-align:center">Bizda bor ustozlar royhati:</h1>
+    {% for i in us %}
+    <ul>
+        <li><h2>{{i}}</h2>></li>
+    </ul>
+    <button><a href="/ustoz/{{i.id}}">O'chirish</a> </button>
+    {%endfor%}
+    <hr>
+    <form method="post" action="/ustoz/">{% csrf_token %}
+      <input type="text" name="ism" placeholder="Ustozning ismi">
+    </form>
+</body>
+</html>
